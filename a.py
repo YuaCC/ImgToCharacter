@@ -16,9 +16,9 @@ if __name__ == '__main__':
     img=cv2.equalizeHist(img)
     img=cv2.GaussianBlur(img,(blurKsize,blurKsize),0)
     img=cv2.resize(img,(width*2, height*3))
-    #cv2.imwrite('gray.jpg',img)
+    cv2.imwrite('gray.jpg',img)
     th,img=cv2.threshold(img,127,255,cv2.THRESH_BINARY)
-    #cv2.imwrite('binary.jpg',img)
+    cv2.imwrite('binary.jpg',img)
     img=img/255
     ch =np.array([' ', '⠁', '⠂', '⠃', '⠄', '⠅', '⠆', '⠇', '⠈', '⠉', '⠊', '⠋', '⠌', '⠍', '⠎', '⠏', '⠐', '⠑', '⠒', '⠓', '⠔', '⠕',
          '⠖', '⠗', '⠘', '⠙', '⠚', '⠛', '⠜', '⠝', '⠞', '⠟', '⠠', '⠡', '⠢', '⠣', '⠤', '⠥', '⠦', '⠧', '⠨', '⠩', '⠪', '⠫',
